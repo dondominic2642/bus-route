@@ -4,7 +4,7 @@ const masterBusData = {
         taliparamba: [
             { time: "05:30 AM", name: "ജെ ജെ (ചെമ്പേരിയിൽ നിന്ന് 5:25)", nameEn: "JJ (From Chemperi 5:25)", route: "ശ്രീകണ്ഠാപുരം, തളിപ്പറമ്പ്", routeEn: "Sreekandapuram, Taliparamba" },
             { time: "06:45 AM", name: "സാഗര (ചെമ്പേരിയിൽ നിന്ന് 6:35)", nameEn: "Sagara (From Chemperi 6:35)", route: "ശ്രീകണ്ഠാപുരം, തളിപ്പറമ്പ്", routeEn: "Sreekandapuram, Taliparamba" },
-            { time: "06:55 AM", name: "KSRTC", nameEn: "KSRTC", route: "പുളിക്കുരുമ്പ, തളിപ്പറമ്പ്", routeEn: "Pulikkurumba, Taliparamba" },
+            { time: "06:55 AM", name: "KSRTC", nameEn: "KSRTC", route: "പുളിക്കുруമ്പ, തളിപ്പറമ്പ്", routeEn: "Pulikkurumba, Taliparamba" },
             { time: "07:35 AM", name: "നന്ദനം", nameEn: "Nandanam", route: "ശ്രീകണ്ഠാപുരം, തളിപ്പറമ്പ്", routeEn: "Sreekandapuram, Taliparamba" },
             { time: "07:50 AM", name: "നന്ദനം (ചെമ്പേരിയിൽ നിന്ന് 7:40)", nameEn: "Nandanam (From Chemperi 7:40)", route: "ശ്രീകണ്ഠാപുരം, തളിപ്പറമ്പ്", routeEn: "Sreekandapuram, Taliparamba" },
             { time: "08:30 AM", name: "കുന്നത്ത് (ചെമ്പേരിയിൽ നിന്ന് 8:20)", nameEn: "Kunnath (From Chemperi 8:20)", route: "ശ്രീകണ്ഠാപുരം, തളിപ്പറമ്പ്", routeEn: "Sreekandapuram, Taliparamba" },
@@ -22,7 +22,7 @@ const masterBusData = {
             { time: "12:45 PM", name: "ഫാമിലി", nameEn: "Family", route: "ശ്രീകണ്ഠാപുരം, കണ്ണൂർ", routeEn: "Sreekandapuram, Kannur" },
             { time: "02:50 PM", name: "മീനാക്ഷി (ചെമ്പേരിയിൽ നിന്ന് 2:50)", nameEn: "Meenakshi (From Chemperi 2:50)", route: "ശ്രീകണ്ഠാപുരം, തളിപ്പറമ്പ്", routeEn: "Sreekandapuram, Taliparamba" },
             { time: "03:20 PM", name: "സാഗര (ചെമ്പേരിയിൽ നിന്ന് 3:15)", nameEn: "Sagara (From Chemperi 3:15)", route: "ശ്രീകണ്ഠാപുരം, തളിപ്പറമ്പ്", routeEn: "Sreekandapuram, Taliparamba" },
-            { time: "03:40 PM", name: "AIശ്വര്യ", nameEn: "Aishwarya", route: "ശ്രീകണ്ഠാപുരം, കണ്ണൂർ", routeEn: "Sreekandapuram, Kannur" },
+            { time: "03:40 PM", name: "ഐശ്വര്യ", nameEn: "Aishwarya", route: "ശ്രീകണ്ഠാപുരം, കണ്ണൂർ", routeEn: "Sreekandapuram, Kannur" },
             { time: "03:50 PM", name: "മുത്തപ്പൻ", nameEn: "Muthappan", route: "ശ്രീകണ്ഠാപുരം, കണ്ണൂർ", routeEn: "Sreekandapuram, Kannur" },
             { time: "04:00 PM", name: "KSRTC", nameEn: "KSRTC", route: "പുളിക്കുരുമ്പ, തളിപ്പറമ്പ്", routeEn: "Pulikkurumba, Taliparamba" },
             { time: "04:15 PM", name: "ജെ ജെ", nameEn: "JJ", route: "ശ്രീകണ്ഠാപുരം, തളിപ്പറമ്പ്", routeEn: "Sreekandapuram, Taliparamba" },
@@ -174,7 +174,6 @@ const masterBusData = {
         ]
     }
 };
-
 const destRouteNames = {
     chelliparamba: [
         { id: "taliparamba", ml: "തളിപ്പറമ്പ്", en: "Taliparamba", query: "Chelliparamba to Taliparamba" },
@@ -280,7 +279,7 @@ function renderBuses() {
                 const activeRouteObj = destRouteNames[selectedSource].find(r => r.id === selectedDest);
                 const startLoc = selectedSource === 'chelliparamba' ? 'Chelliparamba, Kerala' : 'Chemperi, Kerala';
                 
-                // ഫിക്സ് ചെയ്ത ഗൂഗിൾ മാപ്പ് യുആർഎൽ
+                // കൃത്യമായി ഫിക്സ് ചെയ്ത ഗൂഗിൾ മാപ്പ് യുആർഎൽ ഫോർമുല
                 const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(startLoc)}&destination=${encodeURIComponent(activeRouteObj.query + ', Kerala')}&travelmode=driving`;
                 
                 window.open(googleMapsUrl, '_blank');
