@@ -238,7 +238,6 @@ function buildDestTabs() {
     });
     renderBuses();
 }
-
 function renderBuses() {
     const listDiv = document.getElementById('busList');
     listDiv.innerHTML = '';
